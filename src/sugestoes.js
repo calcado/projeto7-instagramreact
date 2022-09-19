@@ -1,0 +1,36 @@
+// Todos os itens repetitivos do projeto (stories, posts, sugestões, etc) devem ser representados como Arrays/Objetos nos componentes e renderizados no JSX usando map. No projeto, esses itens são://
+function ComponenteSugestao(props){
+  return(
+    <div class="sugestao">
+            <div class="usuario">
+              <img src={props.imagem} />
+              <div class="texto">
+                <div class="nome">{props.nome}</div>
+                <div class="razao">{props.razao}</div>
+              </div>
+            </div>
+
+            <div class="seguir">Seguir</div>
+          </div>
+  )
+}
+
+
+export default function Sugestoes (){
+    const sugestao = [{imagem:"assets/img/bad.vibes.memes.svg", nome:"bad.vibes.memes", razao:"Segue você",},
+    {imagem:"assets/img/chibirdart.svg", nome:"chibirdart", razao:"Segue você",},
+    {imagem:"assets/img/razoesparaacreditar.svg", nome:"razoesparaacreditar", razao:"Novo no Instagram",},
+    {imagem:"assets/img/adorable_animals.svg", nome:"adorable_animals", razao:"Segue você",},
+    {imagem:"assets/img/smallcutecats.svg", nome:"smallcutecats", razao:"Segue você",}]
+    
+    return (
+        <div class="sugestoes">
+          <div class="titulo">
+            Sugestões para você
+            <div>Ver tudo</div>
+          </div>
+
+          {sugestao.map((p)=> <ComponenteSugestao imagem = {p.imagem} nome = {p.nome} razao = {p.razao} />)}
+        </div>
+    )
+}
