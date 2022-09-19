@@ -1,4 +1,3 @@
-// Todos os itens repetitivos do projeto (stories, posts, sugestões, etc) devem ser representados como Arrays/Objetos nos componentes e renderizados no JSX usando map. No projeto, esses itens são://
 function PropStories(props){
   return(
     <div class="story">
